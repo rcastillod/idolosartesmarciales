@@ -34,7 +34,7 @@ export default {
     methods: {
         async getPeleador() {
             try {
-                let url = 'http://localhost:8080/peleadores.json'
+                let url = '../peleadores.json'
                 let response = await fetch(url)
                 if(!response.ok) throw ('Ocurrió un error en la petición.')
 
