@@ -1,7 +1,7 @@
 <template>
     <div class="search-wrapper">
         <div class="input-group grid">
-            <input type="text" placeholder="Ingresa un id" v-model="id">
+            <input @keyup.enter="searchPeleador(id)" type="text" placeholder="Ingresa un id" v-model="id">
             <button @click="searchPeleador(id)">Buscar</button>
         </div>
     </div>

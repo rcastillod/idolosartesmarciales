@@ -9,6 +9,7 @@
                 </div>
                 <div class="peleadorSingle__content">
                     <h2>{{peleador.nombre}}</h2>
+                    <span>ID: {{peleador.id}}</span>
                     <p>{{peleador.biografia}}</p>
                 </div>
             </div>
@@ -90,6 +91,7 @@ export default {
     .peleadorSingle__thumb img {
         border-radius: .625rem;
         object-fit: cover;
+        object-position: top;
         margin: 1.25rem 0 0 1.25rem;
         width: 90%;
     }
@@ -112,6 +114,12 @@ export default {
         color: hsl(var(--black-color));
         font-size: 1.875rem;
         position: relative;
+    }
+    .peleadorSingle__content span {
+        color: hsl(var(--primary-color));
+        display: block;
+        font-weight: var(--fw-bold);
+        margin-bottom: 1.25rem;
     }
     .peleadorNotFound {
         align-items: center;

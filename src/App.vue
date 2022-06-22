@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <navigation></navigation>
-        <router-view />
+        <transition name="fade">
+            <router-view />
+        </transition>
     </div>
 </template>
 
@@ -215,5 +217,18 @@ select {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Transition                                 */
+/* -------------------------------------------------------------------------- */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>

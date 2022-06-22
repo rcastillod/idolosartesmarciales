@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="container flex">
-            <a class="logo">
+            <a class="logo" @click="toHome()">
                 <img src="../assets/logo-02.svg" width="80" alt="Fight Club">
             </a>
             <div class="link-wrapper flex">
@@ -15,6 +15,11 @@
 <script>
 export default {
     name: 'navigation-comp',
+    methods: {
+        toHome() {
+            this.$router.push('/')
+        }
+    }
 }
 </script>
 
@@ -33,8 +38,9 @@ nav .container {
 }
 
 nav a {
-    font-weight: bold;
     color: hsl(var(--black-color));
+    cursor: pointer;
+    font-weight: bold;
     text-decoration: none;
     transition: color 450ms ease-in-out;
 }
