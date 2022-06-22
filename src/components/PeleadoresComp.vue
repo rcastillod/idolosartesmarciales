@@ -60,9 +60,19 @@ export default {
 <style scoped>
     .peleadoresWrapper {
         --gap: 3.125rem;
-        row-gap: 9.375rem;
-        grid-template-columns: repeat(3, 1fr);
+        row-gap: 7.5rem;
         margin: 9.375rem 0 6.25rem;
+    }
+    @media ( min-width: 576px ) {
+        .peleadoresWrapper {
+            row-gap: 9.375rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media ( min-width: 768px ) {
+        .peleadoresWrapper {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
     .peleadorCard {
         border-radius: .625rem;
@@ -92,6 +102,9 @@ export default {
     }
     .peleadorCard__thumb img {
         transition: transform 300ms ease-in-out;
+        object-fit: cover;
+        object-position: top;
+        height: 100%;
         width: 100%;
     }
     .peleadorCard__name {

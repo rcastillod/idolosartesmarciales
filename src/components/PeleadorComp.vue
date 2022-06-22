@@ -67,8 +67,10 @@ export default {
     .peleadorWrapper {
         padding-block: 6.25rem;
     }
-    .peleadorSingle {
-        grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 768px) {
+        .peleadorSingle {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     .peleadorSingle__thumb {
         overflow: hidden;
@@ -81,16 +83,27 @@ export default {
         position: absolute;
         top: 0;
         left: 0;
-        height: 18.75rem;
-        width: 18.75rem;
+        height: clamp(6.25rem, 50vw, 18.75rem);
+        width: clamp(6.25rem, 50vw, 18.75rem);
         z-index: -1;
     }
     .peleadorSingle__thumb img {
         border-radius: .625rem;
         object-fit: cover;
-        margin: 1.875rem 0 0 1.875rem;
-        height: 31.25rem;
-        width: 31.25rem;
+        margin: 1.25rem 0 0 1.25rem;
+        width: 90%;
+    }
+    @media (min-width: 768px) {
+        .peleadorSingle__thumb img {
+            margin: 1.875rem 0 0 1.875rem;
+        }
+        
+    }
+    @media ( min-width: 1330px ) {
+        .peleadorSingle__thumb img {
+            height: 31.25rem;
+            width: 31.25rem;
+        }
     }
     .peleadorSingle__content {
         margin-top: 1.875rem;

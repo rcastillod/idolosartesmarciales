@@ -1,19 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import BuscadorView from '@/views/BuscadorView.vue'
-import NotFound from '@/views/NotFound.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/buscador',
     name: 'buscador',
     component: BuscadorView
   },
@@ -25,13 +18,13 @@ const routes = [
   {
     path: '/peleador/:id',
     name: 'peleador',
-    component: () => import(/* webpackChunkName: "peleadores" */ '../views/PeleadorView.vue'),
+    component: () => import(/* webpackChunkName: "peleador" */ '../views/PeleadorView.vue'),
     props: true
   },
   {
     path: '*',
     name: 'notFound',
-    component: NotFound
+    component: () => import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
   }
 ]
 

@@ -170,9 +170,9 @@ select {
 }
 
 .container {
-    padding-inline: 2em;
+    --max-width: 83.75rem;
+    width: min(100% - 2rem, var(--max-width));
     margin-inline: auto;
-    max-width: min(100% - 2rem, 83.75rem);
 }
 
 .section-title {

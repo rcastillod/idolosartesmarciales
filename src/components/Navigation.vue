@@ -5,8 +5,7 @@
                 <img src="../assets/logo-02.svg" width="80" alt="Fight Club">
             </a>
             <div class="link-wrapper flex">
-                <router-link to="/">Home</router-link>
-                <router-link to="/buscador">Buscador</router-link>
+                <router-link to="/">Buscador</router-link>
                 <router-link to="/peleadores">Peleadores</router-link>
             </div>
         </div>
