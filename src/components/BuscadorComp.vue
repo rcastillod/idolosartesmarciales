@@ -36,12 +36,14 @@ export default {
 .search-wrapper {
     width: min(100%, 37.5rem);
 }
+input, button {
+    font-size: clamp(1.25rem, 3vw, 1.625rem);
+    font-weight: var(--fw-bold);
+    padding: .625em;
+}
 input {
     border: none;
     color: hsl(var(--black-color));
-    font-size: 1.625rem;
-    font-weight: var(--fw-bold);
-    padding: .625em;
 }
 input:active,
 input:focus {
@@ -52,9 +54,6 @@ button {
     border: none;
     color: hsl(var(--white-color));
     cursor: pointer;
-    font-size: 1.625rem;
-    font-weight: var(--fw-bold);
-    padding: .625em;
     transition: background 450ms ease-in-out;
 }
 button:hover,

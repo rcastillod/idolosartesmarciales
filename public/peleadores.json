@@ -2,26 +2,31 @@
     {
         "id": "abc",
         "nombre": "Bruce Lee",
+        "biografia": "Bruce Lee fue un artista marcial, maestro de artes marciales, actor, cineasta, filósofo y escritor estadounidense de origen hongkonés.",
         "imgSrc": "https://hips.hearstapps.com/pop.h-cdn.co/assets/cm/15/05/640x506/54ca59808eddb_-_bruce-lee.jpg?resize=480:*"
     },
     {
         "id": "123",
         "nombre": "Jackie Chan",
+        "biografia": "Chan Kong-sang, ​ conocido por su nombre artístico Jackie Chan, es un artista marcial, comediante, cantante, actor, acróbata, doble de acción, coordinador de dobles de acción, director, guionista, productor y actor de voz chino.",
         "imgSrc": "https://4.bp.blogspot.com/-gUq3iVg0Cx4/V-HdgAJH1DI/AAAAAAAACME/ZdrXcnvzEK8ao9gqaNU1E5AiiC0brM2FQCLcB/s1600/jackie.jpg"
     },
     {
         "id": "ggg",
         "nombre": "Jet Li",
+        "biografia": "Li Lianjie, más conocido por su nombre artístico Jet Li, es un artista marcial, actor y productor chino, nacionalizado singapurense en 2009. Después de retirarse a la edad de 17 años del wushu, disciplina en la que ganó 15 medallas de oro y se retiró invicto, debutó como actor en la película El templo de Shaolin.",
         "imgSrc": "https://i.pinimg.com/originals/78/ca/a9/78caa94e08b96527f9c909588b3f9435.jpg"
     },
     {
         "id": "kia",
         "nombre": "Donnie Yen",
-        "imgSrc": "https://cinefila.mx/wp-content/uploads/2020/05/Cinco-cosas-que-no-sab%C3%ADas-sobre-Donnie-Yen.jpg"
+        "biografia": "Donnie Yen es un artista marcial, actor y coreógrafo chino. Yen es considerado por muchos como uno de los actores asiáticos de acción más populares de los tiempos recientes.",
+        "imgSrc": "https://4.bp.blogspot.com/-d94I967Cso0/WCHs3o9mGuI/AAAAAAAAJ0c/TEmdF_r-b5U4lFzYlbEioyJOpBDTfkCBACLcB/s1600/chirrut-imwe_5ed7457a.jpeg"
     },
     {
         "id": "tre",
         "nombre": "Jean-Claude Van Damme",
+        "biografia": "Jean-Claude Camille François Van Varenberg, más conocido como Jean-Claude Van Damme, es un actor, guionista, productor y director del cine de acción belga. Es especialista en artes marciales, cinturón negro segundo dan en Karate-Do Shotokan.",
         "imgSrc": "https://i.pinimg.com/originals/61/44/b8/6144b831f7b714f90564a59b8551b4a7.jpg"
     }
 ]

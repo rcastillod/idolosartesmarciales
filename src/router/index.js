@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BuscadorView from '@/views/BuscadorView.vue'
-import PeleadoresView from '@/views/PeleadoresView.vue'
-import PeleadorView from '@/views/PeleadorView.vue'
 
 Vue.use(VueRouter)
 
@@ -21,21 +19,13 @@ const routes = [
   {
     path: '/peleadores',
     name: 'peleadores',
-    component: PeleadoresView
+    component: () => import(/* webpackChunkName: "peleadores" */ '../views/PeleadoresView.vue')
   },
   {
     path: '/peleador/:id',
     name: 'peleador',
-    component: PeleadorView,
+    component: () => import(/* webpackChunkName: "peleadores" */ '../views/PeleadorView.vue'),
     props: true
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
 ]
 

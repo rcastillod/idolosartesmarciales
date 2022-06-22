@@ -1,11 +1,22 @@
 <template>
-    <div v-if="!notFound" class="peleador">
-        {{this.peleador.id}}
-        {{this.peleador.nombre}}
-        {{this.peleador.imgSrc}}
-    </div>
-    <div v-else class="div">
-        <p>El peleador que buscaste no existe</p>
+    <div class="container">
+        <div class="peleadorWrapper">
+            <div v-if="!notFound" class="peleadorSingle grid">
+                <div class="peleadorSingle__thumb">
+                    <figure>
+                        <img :src="peleador.imgSrc" :alt="peleador.nombre">
+                    </figure>
+                </div>
+                <div class="peleadorSingle__content">
+                    <h2>{{peleador.nombre}}</h2>
+                    <p>{{peleador.biografia}}</p>
+                </div>
+            </div>
+            <div v-else class="peleadorNotFound flex direction-column">
+                <img src="../assets/peleador-notfound.svg" width="150">
+                <p>El peleador que buscaste no existe</p>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -53,5 +64,47 @@ export default {
 </script>
 
 <style scoped>
-    
+    .peleadorWrapper {
+        padding-block: 6.25rem;
+    }
+    .peleadorSingle {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .peleadorSingle__thumb {
+        overflow: hidden;
+        position: relative;
+    }
+    .peleadorSingle__thumb::before {
+        content: '';
+        background-color: hsl(var(--primary-color));
+        border-radius: .625rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18.75rem;
+        width: 18.75rem;
+        z-index: -1;
+    }
+    .peleadorSingle__thumb img {
+        border-radius: .625rem;
+        object-fit: cover;
+        margin: 1.875rem 0 0 1.875rem;
+        height: 31.25rem;
+        width: 31.25rem;
+    }
+    .peleadorSingle__content {
+        margin-top: 1.875rem;
+    }
+    .peleadorSingle__content h2 {
+        color: hsl(var(--black-color));
+        font-size: 1.875rem;
+        position: relative;
+    }
+    .peleadorNotFound {
+        align-items: center;
+    }
+    .peleadorNotFound p {
+        color: hsl(var(--black-color));
+        font-size: 1.875rem;
+    }
 </style>
